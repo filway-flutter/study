@@ -1,23 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:study/widget/my_button.dart';
+import 'package:study/widget/my_scaffold.dart';
+import 'package:study/widget/tutorial_home.dart';
 
 void main() {
-  runApp(const MyApp());
-}
+  // hello world
+  // runApp(const Center(
+  //   child: Text(
+  //     'Hello, world!',
+  //     textDirection: TextDirection.ltr,
+  //   ),
+  // ));
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  // my scaffold
+  // runApp(
+  //     const MaterialApp(title: 'My app', home: SafeArea(child: MyScaffold())));
 
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Study',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+  // Using Material Components
+  // runApp(const MaterialApp(
+  //   title: 'Flutter Tutorial',
+  //   home: TutorialHome(),
+  // ));
+
+  // Handling Gestures
+  runApp(
+    const MaterialApp(
+        home: Scaffold(
+      body: Center(
+        child: MyButton(),
       ),
-      home: const Center(
-        child: Text('Hello World'),
-      ),
-    );
-  }
+    )),
+  );
 }
